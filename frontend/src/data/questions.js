@@ -149,9 +149,9 @@ export const translations = {
     mild: "Nomophobie légère",
     moderate: "Nomophobie modérée",
     severe: "Nomophobie sévère", 
-    mildDef: "État où une personne ressent une légère anxiété ou gêne lorsqu'elle est séparée de son téléphone, mais cela n'impacte pas significativement le fonctionnement quotidien ou le bien-être.",
-    moderateDef: "Gêne plus marquée et fréquente liée à l'éloignement du smartphone, qui peut commencer à interférer avec certaines activités quotidiennes et interactions sociales.",
-    severeDef: "Forme la plus intense, s'apparentant à une phobie ou une addiction comportementale grave, perturbant significativement la vie quotidienne, les relations et le bien-être mental.",
+    mildDef: "État où une personne ressent une légère anxiété ou gêne lorsqu'elle est séparée de son téléphone ou qu'elle ne peut pas l'utiliser. Cette forme n'entrave pas ou peu le fonctionnement quotidien et reste souvent contrôlable. Il s'agit de préoccupations modérées concernant la perte de contact, la batterie, ou l'accès à l'information, sans souffrance intense.",
+    moderateDef: "État caractérisé par une gêne plus marquée et fréquente liée à l'éloignement du smartphone. La personne peut ressentir un malaise régulier, un besoin compulsif de vérifier son téléphone, une anxiété tangible à l'idée de perdre sa connectivité ou l'accès à certaines fonctions numériques. Cela commence à interférer avec la concentration ou la sérénité, mais sans entraîner une incapacité majeure.",
+    severeDef: "Forme la plus intense, cette nomophobie s'apparente à une phobie ou une addiction comportementale sévère. La personne subit une détresse importante, pouvant manifester une panique ou une anxiété paralysante à l'idée d'être séparée de son téléphone. Ces symptômes peuvent réellement perturber la vie sociale, professionnelle ou scolaire, avec des manifestations proches de troubles anxieux ou obsessionnels.",
     likertLabels: {
       1: "Totalement en désaccord",
       2: "En désaccord",
