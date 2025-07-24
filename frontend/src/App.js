@@ -84,9 +84,9 @@ function App() {
               />
             </div>
             
-            {/* Logo */}
-            <div className="mb-6 sm:mb-8">
-              <div className="w-96 h-48 sm:w-full sm:max-w-md sm:h-60 mx-auto mb-4 flex items-center justify-center">
+ {/* Logo */}
+             <div className="mb-6 sm:mb-8">
+              <div className="w-576 h-288 sm:w-full sm:max-w-md sm:h-360 mx-auto mb-4 flex items-center justify-center">
                 <img 
                   src="/declick-logo.svg" 
                   alt="Declick Logo" 
@@ -126,9 +126,9 @@ function App() {
             />
           </div>
           
-          {/* Logo */}
+ {/* Logo */}
           <div className="mb-6 sm:mb-8">
-            <div className="w-32 h-16 sm:w-40 sm:h-20 mx-auto mb-4 flex items-center justify-center">
+            <div className="w-192 h-64 sm:w-120 sm:h-120 mx-auto mb-4 flex items-center justify-center">
               <img 
                 src="/declick-logo.svg" 
                 alt="Declick Logo" 
