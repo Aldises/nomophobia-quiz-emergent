@@ -1,0 +1,13 @@
+<svg viewBox="0 0 1536 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .declick-text { 
+        fill: #8B3F8B; 
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif; 
+        font-size: 180px; 
+        font-weight: bold; 
+      }
+    </style>
+  </defs>
+  <text class="declick-text" x="40" y="270">declick</text>
+</svg>
