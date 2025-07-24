@@ -86,7 +86,7 @@ function App() {
             
             {/* Logo */}
             <div className="mb-6 sm:mb-8">
-              <div className="w-32 h-16 sm:w-40 sm:h-20 mx-auto mb-4 flex items-center justify-center">
+              <div className="w-48 h-20 sm:w-64 sm:h-28 mx-auto mb-4 flex items-center justify-center">
                 <img 
                   src="/declick-logo.svg" 
                   alt="Declick Logo" 
