@@ -126,10 +126,14 @@ function App() {
             />
           </div>
           
-          {/* Logo Placeholder */}
+          {/* Logo */}
           <div className="mb-6 sm:mb-8">
-            <div className="w-28 h-12 sm:w-32 sm:h-16 mx-auto bg-purple-600 rounded-lg flex items-center justify-center mb-4">
-              <span className="text-white font-bold text-lg sm:text-xl">DECLICK</span>
+            <div className="w-32 h-16 sm:w-40 sm:h-20 mx-auto mb-4 flex items-center justify-center">
+              <img 
+                src="/declick-logo.svg" 
+                alt="Declick Logo" 
+                className="h-full w-auto object-contain"
+              />
             </div>
           </div>
 
