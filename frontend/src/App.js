@@ -1,52 +1,157 @@
-import { useEffect } from "react";
-import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import axios from "axios";
+import React, { useState, useEffect } from 'react';
+import './App.css';
+import { questions, translations } from './data/questions';
+import LanguageSelector from './components/LanguageSelector';
+import QuizQuestion from './components/QuizQuestion';
+import QuizResults from './components/QuizResults';
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
+function App() {
+  const [currentLanguage, setCurrentLanguage] = useState('en');
+  const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [answers, setAnswers] = useState({});
+  const [showResults, setShowResults] = useState(false);
+  const [totalScore, setTotalScore] = useState(0);
 
-const Home = () => {
-  const helloWorldApi = async () => {
-    try {
-      const response = await axios.get(`${API}/`);
-      console.log(response.data.message);
-    } catch (e) {
-      console.error(e, `errored out requesting / api`);
+  // Load saved state from localStorage
+  useEffect(() => {
+    const savedLanguage = localStorage.getItem('nomophobia_language');
+    const savedQuestion = localStorage.getItem('nomophobia_current_question');
+    const savedAnswers = localStorage.getItem('nomophobia_answers');
+
+    if (savedLanguage) setCurrentLanguage(savedLanguage);
+    if (savedQuestion) setCurrentQuestion(parseInt(savedQuestion));
+    if (savedAnswers) setAnswers(JSON.parse(savedAnswers));
+  }, []);
+
+  // Save state to localStorage
+  useEffect(() => {
+    localStorage.setItem('nomophobia_language', currentLanguage);
+    localStorage.setItem('nomophobia_current_question', currentQuestion.toString());
+    localStorage.setItem('nomophobia_answers', JSON.stringify(answers));
+  }, [currentLanguage, currentQuestion, answers]);
+
+  const handleLanguageChange = (language) => {
+    setCurrentLanguage(language);
+  };
+
+  const handleAnswerChange = (value) => {
+    setAnswers(prev => ({
+      ...prev,
+      [currentQuestion]: value
+    }));
+  };
+
+  const handleNext = () => {
+    if (currentQuestion < questions.length - 1) {
+      setCurrentQuestion(prev => prev + 1);
+    } else {
+      // Calculate final score and show results
+      const score = Object.values(answers).reduce((total, answer) => total + answer, 0);
+      setTotalScore(score);
+      setShowResults(true);
     }
   };
 
-  useEffect(() => {
-    helloWorldApi();
-  }, []);
+  const handlePrevious = () => {
+    if (currentQuestion > 0) {
+      setCurrentQuestion(prev => prev - 1);
+    }
+  };
+
+  const handleRestart = () => {
+    setCurrentQuestion(0);
+    setAnswers({});
+    setShowResults(false);
+    setTotalScore(0);
+    localStorage.removeItem('nomophobia_current_question');
+    localStorage.removeItem('nomophobia_answers');
+  };
+
+  const canGoNext = answers[currentQuestion] !== undefined;
+  const canGoPrevious = currentQuestion > 0;
+
+  if (showResults) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-yellow-50">
+        <div className="container mx-auto px-4 py-8">
+          {/* Header */}
+          <div className="text-center mb-12">
+            <div className="flex justify-center mb-6">
+              <LanguageSelector 
+                currentLanguage={currentLanguage}
+                onLanguageChange={handleLanguageChange}
+                translations={translations}
+              />
+            </div>
+            
+            {/* Logo Placeholder */}
+            <div className="mb-8">
+              <div className="w-32 h-16 mx-auto bg-purple-600 rounded-lg flex items-center justify-center mb-4">
+                <span className="text-white font-bold text-xl">DECLICK</span>
+              </div>
+            </div>
+
+            <h1 className="text-4xl font-bold text-gray-800 mb-4">
+              {translations[currentLanguage].title}
+            </h1>
+            <p className="text-xl text-gray-600">
+              {translations[currentLanguage].subtitle}
+            </p>
+          </div>
+
+          <QuizResults 
+            score={totalScore}
+            onRestart={handleRestart}
+            translations={translations[currentLanguage]}
+          />
+        </div>
+      </div>
+    );
+  }
 
   return (
-    <div>
-      <header className="App-header">
-        <a
-          className="App-link"
-          href="https://emergent.sh"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="https://avatars.githubusercontent.com/in/1201222?s=120&u=2686cf91179bbafbc7a71bfbc43004cf9ae1acea&v=4" />
-        </a>
-        <p className="mt-5">Building something incredible ~!</p>
-      </header>
-    </div>
-  );
-};
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-yellow-50">
+      <div className="container mx-auto px-4 py-8">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <div className="flex justify-center mb-6">
+            <LanguageSelector 
+              currentLanguage={currentLanguage}
+              onLanguageChange={handleLanguageChange}
+              translations={translations}
+            />
+          </div>
+          
+          {/* Logo Placeholder */}
+          <div className="mb-8">
+            <div className="w-32 h-16 mx-auto bg-purple-600 rounded-lg flex items-center justify-center mb-4">
+              <span className="text-white font-bold text-xl">DECLICK</span>
+            </div>
+          </div>
 
-function App() {
-  return (
-    <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />}>
-            <Route index element={<Home />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
+          <h1 className="text-4xl font-bold text-gray-800 mb-4">
+            {translations[currentLanguage].title}
+          </h1>
+          <p className="text-xl text-gray-600">
+            {translations[currentLanguage].subtitle}
+          </p>
+        </div>
+
+        {/* Quiz */}
+        <QuizQuestion
+          question={questions[currentQuestion]}
+          questionNumber={currentQuestion + 1}
+          totalQuestions={questions.length}
+          currentAnswer={answers[currentQuestion]}
+          onAnswerChange={handleAnswerChange}
+          onNext={handleNext}
+          onPrevious={handlePrevious}
+          canGoNext={canGoNext}
+          canGoPrevious={canGoPrevious}
+          translations={translations[currentLanguage]}
+          language={currentLanguage}
+        />
+      </div>
     </div>
   );
 }
