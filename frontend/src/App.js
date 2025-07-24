@@ -73,10 +73,10 @@ function App() {
   if (showResults) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-yellow-50">
-        <div className="container mx-auto px-4 py-8">
+        <div className="container mx-auto px-2 sm:px-4 py-4 sm:py-8">
           {/* Header */}
-          <div className="text-center mb-12">
-            <div className="flex justify-center mb-6">
+          <div className="text-center mb-8 sm:mb-12">
+            <div className="flex justify-center mb-4 sm:mb-6">
               <LanguageSelector 
                 currentLanguage={currentLanguage}
                 onLanguageChange={handleLanguageChange}
@@ -85,16 +85,16 @@ function App() {
             </div>
             
             {/* Logo Placeholder */}
-            <div className="mb-8">
-              <div className="w-32 h-16 mx-auto bg-purple-600 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-white font-bold text-xl">DECLICK</span>
+            <div className="mb-6 sm:mb-8">
+              <div className="w-28 h-12 sm:w-32 sm:h-16 mx-auto bg-purple-600 rounded-lg flex items-center justify-center mb-4">
+                <span className="text-white font-bold text-lg sm:text-xl">DECLICK</span>
               </div>
             </div>
 
-            <h1 className="text-4xl font-bold text-gray-800 mb-4">
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-800 mb-2 sm:mb-4 px-2">
               {translations[currentLanguage].title}
             </h1>
-            <p className="text-xl text-gray-600">
+            <p className="text-lg sm:text-xl text-gray-600 px-2">
               {translations[currentLanguage].subtitle}
             </p>
           </div>
@@ -111,10 +111,10 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-yellow-50">
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-2 sm:px-4 py-4 sm:py-8">
         {/* Header */}
-        <div className="text-center mb-12">
-          <div className="flex justify-center mb-6">
+        <div className="text-center mb-8 sm:mb-12">
+          <div className="flex justify-center mb-4 sm:mb-6">
             <LanguageSelector 
               currentLanguage={currentLanguage}
               onLanguageChange={handleLanguageChange}
@@ -123,16 +123,16 @@ function App() {
           </div>
           
           {/* Logo Placeholder */}
-          <div className="mb-8">
-            <div className="w-32 h-16 mx-auto bg-purple-600 rounded-lg flex items-center justify-center mb-4">
-              <span className="text-white font-bold text-xl">DECLICK</span>
+          <div className="mb-6 sm:mb-8">
+            <div className="w-28 h-12 sm:w-32 sm:h-16 mx-auto bg-purple-600 rounded-lg flex items-center justify-center mb-4">
+              <span className="text-white font-bold text-lg sm:text-xl">DECLICK</span>
             </div>
           </div>
 
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-800 mb-2 sm:mb-4 px-2">
             {translations[currentLanguage].title}
           </h1>
-          <p className="text-xl text-gray-600">
+          <p className="text-lg sm:text-xl text-gray-600 px-2">
             {translations[currentLanguage].subtitle}
           </p>
         </div>

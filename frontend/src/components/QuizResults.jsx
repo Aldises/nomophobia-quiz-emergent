@@ -32,44 +32,44 @@ const QuizResults = ({ score, onRestart, translations }) => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto">
+    <div className="max-w-4xl mx-auto px-2 sm:px-4">
       {/* Results Card */}
-      <Card className="mb-8 border-2 border-gray-100 shadow-xl">
-        <CardHeader className="text-center pb-4">
-          <CardTitle className="text-3xl font-bold text-gray-800 mb-2">
+      <Card className="mb-6 sm:mb-8 border-2 border-gray-100 shadow-xl">
+        <CardHeader className="text-center pb-2 sm:pb-4 px-4 sm:px-6">
+          <CardTitle className="text-2xl sm:text-3xl font-bold text-gray-800 mb-2">
             {translations.yourScore}
           </CardTitle>
         </CardHeader>
-        <CardContent className="text-center">
+        <CardContent className="text-center px-4 sm:px-6">
           {/* Score Display */}
-          <div className="mb-8">
-            <div className="text-6xl font-bold text-purple-600 mb-2">
+          <div className="mb-6 sm:mb-8">
+            <div className="text-4xl sm:text-6xl font-bold text-purple-600 mb-2">
               {score}
             </div>
-            <div className="text-xl text-gray-600">
+            <div className="text-lg sm:text-xl text-gray-600">
               {translations.outOf}
             </div>
           </div>
 
           {/* Category Badge */}
-          <div className="mb-8">
-            <div className="text-lg font-semibold text-gray-700 mb-3">
+          <div className="mb-6 sm:mb-8">
+            <div className="text-base sm:text-lg font-semibold text-gray-700 mb-3">
               {translations.category}:
             </div>
             <Badge 
-              className={`text-lg px-6 py-2 font-semibold ${getCategoryColor(category)}`}
+              className={`text-base sm:text-lg px-4 sm:px-6 py-2 font-semibold ${getCategoryColor(category)}`}
             >
               {translations[category]}
             </Badge>
           </div>
 
           {/* Definition */}
-          <div className="mb-8">
-            <h3 className="text-lg font-semibold text-gray-700 mb-4">
+          <div className="mb-6 sm:mb-8">
+            <h3 className="text-base sm:text-lg font-semibold text-gray-700 mb-4">
               {translations.definition}:
             </h3>
-            <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
-              <p className="text-gray-700 leading-relaxed text-left">
+            <div className="bg-gray-50 p-4 sm:p-6 rounded-lg border border-gray-200">
+              <p className="text-sm sm:text-base text-gray-700 leading-relaxed text-left">
                 {getDefinition(category)}
               </p>
             </div>
@@ -78,7 +78,7 @@ const QuizResults = ({ score, onRestart, translations }) => {
           {/* Restart Button */}
           <Button
             onClick={onRestart}
-            className="px-8 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold"
+            className="w-full sm:w-auto px-6 sm:px-8 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold text-sm sm:text-base"
           >
             {translations.restart}
           </Button>
