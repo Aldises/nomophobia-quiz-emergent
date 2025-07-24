@@ -179,9 +179,9 @@ export const translations = {
     mild: "Leichte Nomophobie",
     moderate: "Mäßige Nomophobie",
     severe: "Schwere Nomophobie",
-    mildDef: "Ein Zustand, in dem eine Person leichte Angst oder Unbehagen verspürt, wenn sie vom Handy getrennt ist, aber es beeinträchtigt nicht wesentlich die tägliche Funktionsfähigkeit oder das Wohlbefinden.",
-    moderateDef: "Deutlichere und häufigere Unannehmlichkeiten im Zusammenhang mit der Trennung vom Smartphone, die beginnen können, einige tägliche Aktivitäten und soziale Interaktionen zu beeinträchtigen.",
-    severeDef: "Die intensivste Form, ähnlich einer Phobie oder schweren Verhaltenssucht, die das tägliche Leben, Beziehungen und das geistige Wohlbefinden erheblich stört.",
+    mildDef: "Ein Zustand, in dem eine Person leichte Angst oder Unbehagen verspürt, wenn sie von ihrem Handy getrennt ist oder es nicht benutzen kann. Diese Form beeinträchtigt den Alltag kaum oder gar nicht und ist meist kontrollierbar. Es handelt sich um mäßige Sorgen über den Kontaktverlust, den Akkustand oder den Informationszugang, ohne starke Belastung.",
+    moderateDef: "Ein Zustand, der durch deutlichere und häufigere Unannehmlichkeiten im Zusammenhang mit der Trennung vom Smartphone gekennzeichnet ist. Die Person kann regelmäßig Unbehagen verspüren, einen zwanghaften Drang haben, das Handy zu überprüfen, sowie spürbare Angst vor dem Verlust der Verbindung oder des Zugangs zu digitalen Funktionen. Es beginnt, die Konzentration oder Ruhe zu beeinträchtigen, verursacht jedoch keine schwerwiegende Beeinträchtigung.",
+    severeDef: "Die intensivste Form, diese Art der Nomophobie ähnelt einer Phobie oder schweren Verhaltenssucht. Die betroffene Person erlebt erhebliche Belastung, möglicherweise bis hin zu Panik oder lähmender Angst bei dem Gedanken, vom Handy getrennt zu sein. Diese Symptome können das soziale, berufliche oder schulische Leben stark beeinträchtigen und ähneln Angst- oder Zwangsstörungen.",
     likertLabels: {
       1: "Stimme überhaupt nicht zu",
       2: "Stimme nicht zu",
