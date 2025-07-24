@@ -119,9 +119,9 @@ export const translations = {
     mild: "Mild Nomophobia",
     moderate: "Moderate Nomophobia", 
     severe: "Severe Nomophobia",
-    mildDef: "A state where someone feels mild anxiety or discomfort when separated from their phone, but it doesn't significantly impact daily functioning or well-being.",
-    moderateDef: "A more noticeable and frequent discomfort related to smartphone separation, which may begin to interfere with some daily activities and social interactions.",
-    severeDef: "The most intense form, resembling a phobia or severe behavioral addiction, significantly disrupting daily life, relationships, and mental well-being.",
+    mildDef: "A state in which a person experiences mild anxiety or discomfort when separated from their phone or unable to use it. This form does not or only slightly interferes with daily functioning and is generally manageable. It involves moderate concerns about losing contact, battery, or access to information, without intense distress.",
+    moderateDef: "A state marked by more noticeable and frequent discomfort related to being away from the smartphone. The person may feel regular unease, a compulsive need to check their phone, and tangible anxiety about losing connectivity or access to digital functions. It begins to interfere with focus or calmness, but without causing major disability.",
+    severeDef: "The most intense form, this level of nomophobia resembles a phobia or severe behavioral addiction. The person experiences significant distress, potentially manifesting panic or paralyzing anxiety at the idea of being separated from their phone. These symptoms can seriously disrupt social, professional, or academic life, resembling anxiety or obsessive disorders.",
     likertLabels: {
       1: "Strongly Disagree",
       2: "Disagree", 
