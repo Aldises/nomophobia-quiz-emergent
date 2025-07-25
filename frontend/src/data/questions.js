@@ -47,7 +47,7 @@ export const questions = [
   {
     en: "I would feel anxious because I couldn't instantly communicate with my friends or family.",
     fr: "Je serais anxieux(se) de ne pas pouvoir communiquer immédiatement avec mes proches.",
-    de: "Ich wäre ängstlich, weil ich nicht sofort mit meiner Familie oder Freunden kommunizieren könnte."
+    de: "Ich wäre frustriert, weil ich nicht sofort mit meiner Familie oder Freunden kommunizieren könnte."
   },
   {
     en: "I would worry because my friends or family couldn't reach me.",
@@ -57,7 +57,7 @@ export const questions = [
   {
     en: "I would feel nervous because I couldn't receive texts or calls.",
     fr: "Je serais nerveux(se) car je ne pourrais pas recevoir de messages ou d'appels.",
-    de: "Ich wäre nervös, weil ich keine SMS oder Anrufe empfangen könnte."
+    de: "Ich wäre nervös, weil ich keine Nachrichten oder Anrufe empfangen könnte."
   },
   {
     en: "I would be anxious because I couldn't keep in touch with friends or family.",
@@ -186,7 +186,7 @@ export const translations = {
       1: "Stimme überhaupt nicht zu",
       2: "Stimme nicht zu",
       3: "Stimme eher nicht zu",
-      4: "Weder einverstanden noch uneinig",
+      4: "Weder noch",
       5: "Stimme eher zu", 
       6: "Stimme zu",
       7: "Stimme voll und ganz zu"
